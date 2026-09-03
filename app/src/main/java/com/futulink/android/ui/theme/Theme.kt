@@ -1,58 +1,51 @@
 package com.futulink.android.ui.theme
 
-import android.app.Activity
-import android.os.Build
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
-)
-
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+/**
+ * The app ships a single light brand scheme. Dark theme and dynamic color are out of scope for
+ * this assignment, and a fixed scheme keeps the branding predictable on every device.
+ */
+private val FutuLinkColorScheme = lightColorScheme(
+    primary = CobaltBlue,
+    onPrimary = SurfaceWhite,
+    primaryContainer = CobaltBlueLight,
+    onPrimaryContainer = CobaltBlueDark,
+    secondary = Teal,
+    onSecondary = SurfaceWhite,
+    secondaryContainer = TealLight,
+    onSecondaryContainer = TealDark,
+    background = CoolGreyBackground,
+    onBackground = TextPrimary,
+    surface = SurfaceWhite,
+    onSurface = TextPrimary,
+    surfaceVariant = SurfaceMuted,
+    onSurfaceVariant = TextSecondary,
+    // Material 3 components such as NavigationBar paint themselves with the surface-container
+    // roles; without these they would fall back to the purple-tinted baseline palette.
+    surfaceBright = SurfaceWhite,
+    surfaceDim = SurfaceDim,
+    surfaceContainerLowest = SurfaceWhite,
+    surfaceContainerLow = SurfaceContainerLow,
+    surfaceContainer = CoolGreyBackground,
+    surfaceContainerHigh = SurfaceContainerHigh,
+    surfaceContainerHighest = SurfaceContainerHighest,
+    surfaceTint = CobaltBlue,
+    outline = OutlineGrey,
+    outlineVariant = OutlineGrey,
+    error = ErrorRed,
+    onError = SurfaceWhite,
+    errorContainer = ErrorRedLight,
+    onErrorContainer = ErrorRed,
 )
 
 @Composable
-fun FutuLinkTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
-    content: @Composable () -> Unit
-) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
-    }
-
+fun FutuLinkTheme(content: @Composable () -> Unit) {
     MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
+        colorScheme = FutuLinkColorScheme,
+        typography = FutuLinkTypography,
+        content = content,
     )
 }

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.FutuLink" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Only the window shown before Compose draws; the app itself is themed in Compose. -->
+    <style name="Theme.FutuLink" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/brand_background</item>
+    </style>
 </resources>

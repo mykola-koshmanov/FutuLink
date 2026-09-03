@@ -1,3 +1,50 @@
 <resources>
     <string name="app_name">FutuLink</string>
+
+    <!-- Startup -->
+    <string name="startup_loading_message">Loading configuration…</string>
+    <string name="startup_error_title">Unable to load configuration</string>
+    <string name="startup_error_message">Check your internet connection and try again.</string>
+    <string name="startup_retry">Retry</string>
+
+    <!-- Bottom navigation -->
+    <string name="tab_test">Test</string>
+    <string name="tab_statistics">Statistics</string>
+
+    <!-- Speed test -->
+    <string name="speed_test_label">Speed Test</string>
+    <string name="speed_test_status_idle">Ready to measure</string>
+    <string name="speed_test_status_running">Measuring download speed</string>
+    <string name="speed_test_status_completed">Test completed</string>
+    <string name="speed_test_status_error">Test failed</string>
+    <string name="speed_test_unit">Mbps</string>
+    <string name="speed_test_start">Start Test</string>
+    <string name="speed_test_stop">Stop</string>
+    <string name="speed_test_try_again">Try Again</string>
+    <string name="speed_test_run_again">Run Again</string>
+    <string name="speed_test_elapsed">%1$s s of %2$s s</string>
+    <string name="speed_test_average">Average</string>
+    <string name="speed_test_peak">Peak</string>
+    <string name="speed_test_error_network">Unable to complete the speed test. Check your connection and try again.</string>
+    <string name="speed_test_error_no_data">No data was received. Please try again.</string>
+    <string name="speed_test_error_save">The result could not be saved. Please try again.</string>
+
+    <!-- Statistics -->
+    <string name="statistics_title">Statistics</string>
+    <string name="statistics_subtitle">Measurement history</string>
+    <string name="statistics_empty_title">No measurements yet</string>
+    <string name="statistics_empty_message">Complete a speed test to see its result here.</string>
+    <string name="statistics_error_title">History unavailable</string>
+    <string name="statistics_error_message">The measurement history could not be loaded.</string>
+    <string name="statistics_item_type">Speed Test</string>
+
+    <!-- Mode unavailable -->
+    <string name="mode_unavailable_title">Mode unavailable</string>
+    <string name="mode_unavailable_message">Ping Test is not included in this version. The remote configuration selected the Ping mode, but only Speed Test is implemented.</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_app_logo">FutuLink logo</string>
+    <string name="cd_error">Error</string>
+    <string name="cd_information">Information</string>
+    <string name="cd_history">Measurement history</string>
 </resources>
